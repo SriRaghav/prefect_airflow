@@ -17,24 +17,17 @@ def second_task(x):
 def third_task(x):
     print("Printing the third task:" + x)
 
-with Flow("SeqFlow") as flow:
-
-    first_task("no_1")
-    second_task("no_2")
-    third_task("no_3")
-
-
-'''def prefect_flow():
+def prefect_flow():
 
     with Flow("SeqFlow") as flow:
 
         first_task("no_1")
         second_task("no_2")
         third_task("no_3")
-    return flow'''
+    return flow
 
 
 if __name__=='__main__':
-    #flow = prefect_flow()
+    flow = prefect_flow()
     flow.run()
 
